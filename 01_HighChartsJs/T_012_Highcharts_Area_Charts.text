@@ -1,0 +1,34 @@
+
+
+Highcharts - Area Charts
+Advertisements
+ Previous Page Next Page  
+Area charts are used to draw area based charts. In this section, we will discuss the different types of area based charts.
+
+Sr.No.	Chart Type & Description
+1	Basic Area
+Basic area chart.
+
+2	Area with negative values
+Area chart having negative values.
+
+3	Stacked area
+Chart having areas stacked over one another.
+
+4	Percentage area
+Chart with data in percentage terms.
+
+5	Area with missing points
+Chart with missing points in the data.
+
+6	Inverted axes
+Area using inverted axes.
+
+7	Area-spline
+Area chart using spline.
+
+8	Area range
+Area chart using ranges.
+
+9	Area range and line
+Area chart using range and line.

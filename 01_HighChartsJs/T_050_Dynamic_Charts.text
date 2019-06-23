@@ -1,0 +1,13 @@
+
+Highcharts - Dynamic Charts
+Advertisements
+ Previous Page Next Page  
+Dynamic charts are used to draw data based charts where data can change after rendering of chart. In this section, we will discuss the different types of dynamic chart.
+
+Sr.No.	Chart Type & Description
+1	Spline updating each second
+Spline Chart updating each second.
+
+2	Click to add a point
+Chart with point addition capability.
+

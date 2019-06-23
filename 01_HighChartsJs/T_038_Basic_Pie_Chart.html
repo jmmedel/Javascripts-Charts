@@ -1,0 +1,91 @@
+
+
+<!-- 
+
+    Highcharts - Basic Pie Chart
+Following is an example of a basic pie chart.
+
+We have already seen the configuration used to draw a chart in Highcharts Configuration Syntax chapter.
+
+An example of a basic pie chart is given below.
+
+Configurations
+Let us now see the additional configurations/steps taken.
+
+series
+Configure the series type to be pie based. series.type decides the series type for the chart. Here, the default value is "line".
+
+var series = {
+   type: 'pie'
+};
+
+-->
+
+<html>
+   <head>
+      <title>Highcharts Tutorial</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {
+            var chart = {
+               plotBackgroundColor: null,
+               plotBorderWidth: null,
+               plotShadow: false
+            };
+            var title = {
+               text: 'Browser market shares at a specific website, 2014'   
+            };
+            var tooltip = {
+               pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            };
+            var plotOptions = {
+               pie: {
+                  allowPointSelect: true,
+                  cursor: 'pointer',
+                  
+                  dataLabels: {
+                     enabled: true,
+                     format: '<b>{point.name}%</b>: {point.percentage:.1f} %',
+                     style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor)||
+                        'black'
+                     }
+                  }
+               }
+            };
+            var series = [{
+               type: 'pie',
+               name: 'Browser share',
+               data: [
+                  ['Firefox',   45.0],
+                  ['IE',       26.8],
+                  {
+                     name: 'Chrome',
+                     y: 12.8,
+                     sliced: true,
+                     selected: true
+                  },
+                  
+                  ['Safari',    8.5],
+                  ['Opera',     6.2],
+                  ['Others',   0.7]
+               ]
+            }];
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;     
+            json.tooltip = tooltip;  
+            json.series = series;
+            json.plotOptions = plotOptions;
+            $('#container').highcharts(json);  
+         });
+      </script>
+   </body>
+   
+</html>

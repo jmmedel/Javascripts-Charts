@@ -1,0 +1,63 @@
+
+
+<!-- 
+    Highcharts - Area Chart with Negative Values
+Advertisements
+ Previous Page Next Page  
+Following is an example of a area chart with negative values.
+
+We have already seen the configuration used to draw a chart in Highcharts Configuration Syntax chapter. Now, let us discuss an example of an area chart with negative values.
+
+-->
+
+<html>
+   <head>
+      <title>Highcharts Tutorial</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'area'
+            };
+            var title = {
+               text: 'Area chart with negative values'   
+            };   
+            var xAxis = {
+               categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+            };
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                  name: 'John',
+                  data: [5, 3, 4, 7, 2]
+               }, 
+               {
+                  name: 'Jane',
+                  data: [2, -2, -3, 2, 1]
+               }, 
+               {
+                  name: 'Joe',
+                  data: [3, 4, 4, -2, 5]
+               }
+            ];
+
+            var json = {};   
+            json.chart = chart; 
+            json.title = title; 
+            json.xAxis = xAxis;
+            json.credits = credits;
+            json.series = series;
+            $('#container').highcharts(json);
+         });
+      </script>
+   </body>
+   
+</html>

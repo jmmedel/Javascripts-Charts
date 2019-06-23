@@ -1,0 +1,22 @@
+
+Highcharts - 3D Charts
+Advertisements
+ Previous Page Next Page  
+3D charts are used to draw 3-dimensional charts. In this section, we will discuss the different types of 3D charts.
+
+Sr.No.	Chart Type & Description
+1	3D Column
+3D Column Chart.
+
+2	3D Column with null
+3D Column Chart with null and 0 values.
+
+3	3D Column with stacking
+3D Column Chart with stacking and grouping.
+
+4	3D Pie
+3D Pie Chart.
+
+5	3D Donut
+3D Donut Chart.
+

@@ -1,0 +1,83 @@
+
+
+
+<!-- 
+
+    Scatter Chart with Regression Line
+Advertisements
+ Previous Page Next Page  
+We have already seen the configuration used to draw a chart in Highcharts Configuration Syntax chapter.
+
+An example of a combination chart having Scatter Chart with regression line is given below.
+
+Configurations
+Let us now see the additional configurations/steps taken.
+
+series.type
+Configure the series type to be line/scatter based. series.type decides the series type for the chart. Here, the default value is "line".
+
+var series = {
+   type: 'scatter'
+};
+
+-->
+
+<html>
+   <head>
+      <title>Highcharts Tutorial</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var title = {
+               text: 'Scatter plot with regression line'   
+            };
+            var xAxis = {
+               min: -0.5,
+               max: 5.5
+            };
+            var yAxis = {
+               min: 0
+            };
+            var series = [
+               {
+                  type: 'line',
+                  name: 'Regression Line',
+                  data: [[0, 1.11], [5, 4.51]],
+                  marker: {
+                     enabled: false
+                  },
+                  states: {
+                     hover: {
+                        lineWidth: 0
+                     }
+                  },
+                  enableMouseTracking: false
+               }, 
+               {
+                  type: 'scatter',
+                  name: 'Observations',
+                  data: [1, 1.5, 2.8, 3.5, 3.9, 4.2],
+                  marker: {
+                     radius: 4
+                  }
+               }
+            ];     
+            var json = {};   
+            json.title = title;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;
+            json.series = series;
+            $('#container').highcharts(json);  
+         });
+      </script>
+   </body>
+   
+</html>
+
+

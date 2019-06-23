@@ -1,0 +1,39 @@
+
+
+Highcharts - Column Charts
+Advertisements
+ Previous Page Next Page  
+Column charts are used to draw column based charts. In this section, we will discuss the different types of column based charts.
+
+Sr.No.	Chart Type & Description
+1	Basic Column
+Basic column chart.
+
+2	Column with negative values
+Column chart having negative values.
+
+3	Stacked column
+Chart having column stacked over one another.
+
+4	Stacked and Grouped column
+Chart with column in stacked and grouped form.
+
+5	Column with stacked percentage
+Chart with stacked percentage.
+
+6	Column with rotated labels
+Column Chart with rotated labels in columns.
+
+7	Column with drilldown
+Column Chart with drill down capability.
+
+8	Column with fixed placement
+Column Chart with fixed placement.
+
+9	Data defined in HTML table
+Column Chart using Data defined in HTML table.
+
+10	Column Range
+Column Chart using ranges.
+
+

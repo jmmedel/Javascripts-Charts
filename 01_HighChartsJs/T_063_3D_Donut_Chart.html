@@ -1,0 +1,104 @@
+
+
+<!-- 
+
+    Highcharts - 3D Donut Chart
+Advertisements
+ Previous Page Next Page  
+We have already seen the configuration used to draw a chart in Highcharts Configuration Syntax chapter.
+
+An example of a 3D Donut Chart is given below.
+
+Configurations
+Let us now see the additional configurations/steps taken.
+
+chart.options3d
+Configure the chart type to be 3D based. Set the type as 'Pie'. Here, the charts can be rendered in 3 dimensions.
+
+var chart = {
+   type: 'pie',
+   options3d: {
+      enabled: true,
+      alpha: 15,
+      beta: 15,
+      depth: 50,
+      viewDistance: 25
+   }
+};
+plotOptions.pie.innerSize
+The size of the inner diameter for the pie. A size greater than 0 renders a donut chart. The size can be a percentage or a pixel value. Percentages are relative to the pie size. Pixel values are given as integers. Here, the default value is 0.
+
+plotOptions.pie.depth
+The thickness of a 3D pie.
+
+plotOptions: {
+   pie: {
+      innerSize: 100,
+      depth: 45
+   }
+},
+Example
+
+-->
+
+<html>
+   <head>
+      <title>Highcharts Tutorial</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+      <script src = "https://code.highcharts.com/highcharts-3d.js"></script>
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'pie',
+               options3d: {
+                  enabled: true,
+                  alpha: 45         
+               }
+            };
+            var title = {
+               text: 'Contents of Highsoft\'s weekly fruit delivery'   
+            };   
+            var subtitle = {
+               text: '3D donut in Highcharts'
+            };  
+            var plotOptions = {
+               pie: {
+                  innerSize: 100,
+                  depth: 45
+               }
+            };   
+            var series = [{
+               name: 'Delivered amount',
+               data: [
+                  ['Bananas', 8],
+                  ['Kiwi', 3],
+                  ['Mixed nuts', 1],
+                  ['Oranges', 6],
+                  ['Apples', 8],
+                  ['Pears', 4],
+                  ['Clementines', 4],
+                  ['Reddish (bag)', 1],
+                  ['Grapes (bunch)', 1]
+               ]
+            }];     
+            
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;       
+            json.subtitle = subtitle; 
+            json.plotOptions = plotOptions; 
+            json.series = series;   
+            $('#container').highcharts(json);
+         });
+      </script>
+   </body>
+   
+</html>
+
+

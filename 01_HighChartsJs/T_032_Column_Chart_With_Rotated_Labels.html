@@ -1,0 +1,134 @@
+
+
+
+<!-- 
+
+    Column Chart with Rotated Labels
+Advertisements
+ Previous Page Next Page  
+Following is an example of a Column Chart with rotated labels.
+
+We have already seen the configuration used to draw a chart in Highcharts Configuration Syntax chapter. Let us now see additional configurations and also how we have added rotation attribute in dataLabels.
+
+An example of a Column Chart with rotated labels is given below.
+
+dataLabels
+dataLabels is a wrapper object to handle data labels within charts.
+
+Text rotation in degrees. Note that due to a more complex structure, backgrounds, borders and padding will be lost on a rotated data label. This defaults to 0.
+
+dataLabels = {
+   enabled: true,
+   rotation: -90,
+   color: '#FFFFFF',
+   align: 'right',
+   format: '{point.y:.1f}', // one decimal
+   y: 10, // 10 pixels down from the top
+   
+   style: {
+      fontSize: '13px',
+      fontFamily: 'Verdana, sans-serif'
+   }
+}
+
+-->
+
+<html>
+   <head>
+      <title>Highcharts Tutorial</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script src = "https://code.highcharts.com/highcharts.js"></script>  
+   </head>
+   
+   <body>
+      <div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+      <script language = "JavaScript">
+         $(document).ready(function() {  
+            var chart = {
+               type: 'column'
+            };
+            var title = {
+               text: 'World\'s largest cities per 2014'   
+            };    
+            var subtitle = {
+               text: 'Source: <a href = "http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+            };
+            var xAxis = {
+               type: 'category',
+               labels: {
+                  rotation: -45,
+                  style: {
+                     fontSize: '13px',
+                     fontFamily: 'Verdana, sans-serif'
+                  }
+               }
+            };
+            var yAxis = {
+               min: 0,
+               title: {
+                 text: 'Population (millions)'
+               }
+            };  
+            var tooltip = {
+               pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
+            };   
+            var credits = {
+               enabled: false
+            };
+            var series = [
+               {
+                  name: 'Population',
+                  data: [
+                     ['Shanghai', 23.7],
+                     ['Lagos', 16.1],
+                     ['Instanbul', 14.2],
+                     ['Karachi', 14.0],
+                     ['Mumbai', 12.5],
+                     ['Moscow', 12.1],
+                     ['Sao Paulo', 11.8],
+                     ['Beijing', 11.7],
+                     ['Guangzhou', 11.1],
+                     ['Delhi', 11.1],
+                     ['Shenzhen', 10.5],
+                     ['Seoul', 10.4],
+                     ['Jakarta', 10.0],
+                     ['Kinshasa', 9.3],
+                     ['Tianjin', 9.3],
+                     ['Tokyo', 9.0],
+                     ['Cairo', 8.9],
+                     ['Dhaka', 8.9],
+                     ['Mexico City', 8.9],
+                     ['Lima', 8.9]
+                  ],
+                  dataLabels: {
+                     enabled: true,
+                     rotation: -90,
+                     color: '#FFFFFF',
+                     align: 'right',
+                     format: '{point.y:.1f}', // one decimal
+                     y: 10, // 10 pixels down from the top
+                     
+                     style: {
+                        fontSize: '13px',
+                        fontFamily: 'Verdana, sans-serif'
+                     }
+                  }
+               }
+            ];     
+               
+            var json = {};   
+            json.chart = chart; 
+            json.title = title;   
+            json.subtitle = subtitle;
+            json.xAxis = xAxis;
+            json.yAxis = yAxis;   
+            json.tooltip = tooltip;   
+            json.credits = credits;
+            json.series = series;
+            $('#container').highcharts(json);
+         });
+      </script>
+   </body>
+   
+</html>

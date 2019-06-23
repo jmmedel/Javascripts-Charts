@@ -1,0 +1,21 @@
+
+Highcharts - Angular Gauges
+Advertisements
+ Previous Page Next Page  
+Angular Gauges charts are used to draw meter/gauge type charts. In this section, we will discuss the different types of Angular Gauges charts.
+
+Sr.No.	Chart Type & Description
+1	Angular Gauge
+Angular Gauge Chart.
+
+2	Solid Gauge
+Solid Gauge Chart.
+
+3	Clock
+Clock.
+
+4	Gauge with dual axes
+Gauge Chart with dual axes.
+
+5	VU Meter
+VU Meter Chart.

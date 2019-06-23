@@ -1,0 +1,30 @@
+Line charts are used to draw line/spline based charts. In this section, we will discuss 
+the different types of line and spline based charts.
+
+Sr.No.	Chart Type & Description
+1	Basic line
+Basic line chart.
+
+2	With data labels
+Chart with data labels.
+
+3	Ajax loaded data, clickable points
+Chart drawn after retrieving data from server.
+
+4	Time series, zoomable
+Chart with time series.
+
+5	Spline with inverted axes
+Spline chart having inverted axes.
+
+6	Spline with symbols
+Spline chart using symbols for heat/rain.
+
+7	Spline with plot bands
+Spline chart with plot bands.
+
+8	Time data with irregular intervals
+Chart of a large set of time based data.
+
+9	Logarithmic axis
+Chart depicting the logarithmic axis.
